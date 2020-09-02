@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GifOs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b2ea90a6f3.js" crossorigin="anonymous"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <p>
+            ¡Bienvenidos/as a Guifos.com! ------ Donde los gifs están.////// Número
+            de visitas: 12.765.803
+        </p>
+    </header>
+
+    <div class="create-content">
+
+        <!-- barra de navegación -->
+        <main>
+            <div class="nav-content" onclick="document.location='index.html'">
+                <i class="fas fa-arrow-left"></i><img src="./img/gifOF_logo.png" alt="Logo de Guifos" id="logoImg" />
+            </div>
+            <div class="main-content">
+                <div class="dropdown">
+                    <button class="dropbtn" id="dropBtn">
+                        <p>Elegir tema</p>
+                        <div class="img-content"><i class="fas fa-caret-down"></i></div>
+                    </button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <button id="light">Sailor Light</button>
+                        <button id="night">Sailor Night</button>
+                    </div>
+                </div>
+                <a href="#myGuifos" class="btn-mygif"> <span>M</span>is Guifos</a>
+            </div>
+        </main>
+
+        <!-- Paso 1 ---- Instructivo para crear guifos -->
+        <section class="create-gif-section" id="createGifSection">
+            <div class="create-gif-title">
+                <h3>Crear GifOs</h3>
+                <div class="gif-title">
+                    <img src="./img/window img.png" alt="window">
+                    <div class="gif-title-content">
+                        <h4><strong>Aquí podrás crear tus propios Gifos</strong></h4>
+                        <p>Crear tu <strong>guifo</strong> es muy facil, graba cualquier imagen con tu camara y obten
+                            guifos</br>
+                            personalizados. Los pasos para crear tu guifo son:</p>
+                        <ol>
+                            <li>Dar permisos de acceso a la camara (solo por el tiempo de uso)</li>
+                            <li>Capturar tu momento guifo</li>
+                            <li>Revisar el momento</li>
+                            <li>Listo para subir y compartir</li>
+                        </ol>
+                        <p>¿Quieres comenzar a crear tu <strong>guifo</strong> ahora?</p>
+                    </div>
+                </div>
+                <div class="create-button">
+                    <button id="btnCancel" onclick="location.href='./'">Cancelar</button>
+                    <button id="btnCreate" onclick="getOpenCam()">Comenzar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paso 2 ---- Accediendo a la camara -->
+        <section class="open-video hidden" id="sectionVideo">
+            <div class="open-video-div">
+                <div class="title-start-video">
+                    <p>Un chequeo antes de comenzar </p>
+                    <a href="./upload.html">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+                <div class="alert-image">
+                    <video id="openVideo" class="video" autoplay loop></video>
+                </div>
+                <div class="btn-start-video" id="createRecord">
+                    <button class="btn-camera"><i class="fas fa-camera"></i></button>
+                    <button class="btn-capture">Capturar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paso 3 ---- Capturando tu Guifo -->
+        <section class="capture-guifo hidden" id="captureGuifo">
+            <div class="capture-video-div">
+                <div class="title-capture-video">
+                    <p id="titleCreateGuifo">Capturando tu guifo</p>
+                    <a href="./upload.html">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+                <div class="alert-content">
+                    <div class="alert-image"></div>
+                </div>
+                <div class="btn-capture-video">
+                    <div class="btn-stop-watch">
+                        <div class="chronometer hidden" id="stopWatch">00:00:00:00</div>
+                    </div>
+
+                    <div class="btn-create-content">
+                        <div class="btn-create-restart">
+                            <button class="btn-repeat-capture" id="createReStart">Repetir captura</button>
+                        </div>
+                        <div class="btn-create-upload">
+                            <button class="btn-upload-guifo" id="createUpload">Subir Gifo</button>
+                        </div>
+                    </div>
+
+                    <div class="btn-stop-record">
+                        <div class="div-btn-recording" id="btnRecording"><img class="btn-recording" src="./img/recording.svg" alt="boton recording"></div>
+                        <button class="btn-ready" id="stopRecord">Listo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paso 4 ---- Subiendo tu guifo -->
+        <section class="upload-guifo hidden" id="uploadGuifo">
+            <div class="upload-guifo-div">
+                <div class="title-upload-video">
+                    <p>Subiendo Guifo</p>
+                    <a href="./upload.html">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+
+                <div class="alert-content">
+                    <div class="uploading">
+                        <img src="./img/globe_img.png" alt="subiendo tu guifo">
+                        <h3><strong>Estamos subiendo tu guifo...</strong></h3>
+                        <div class="progress-bar">
+                            <img src="./img/loader_light.gif" alt="subiendo">
+                        </div>
+                        <p class="time-rest">Tiempo restante: <s>58 años</s> algunos minutos despues...</p>
+                    </div>
+                </div>
+                <div class="btn-capture-video">
+                    <button class="btn-cancel" id="createCancelUpload">Cancelar</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Paso 5 ---- Guifo subido -->
+        <section class="succes-create hidden" id="succesUploadGuifo">
+            <div class="succes-create-guifo">
+                <div class="title-upload-video">
+                    <p>Guifo subido con éxito</p>
+                    <a href="./upload.html">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+                <div class="alert-content">
+                    <div class="alert-image"></div>
+                    <div class="btns-succes">
+                        <h3 class="title-succes-guifo"><strong>Guifo creado con éxito</strong></h3>
+                        <button class="btn-create-copy" id="createCopy">Copiar Enlace Guifo</button>
+                        <button class="btn-create-download"  id="createDownload">Descargar Guifo</button>
+                    </div>
+                </div>
+                <div class="btn-ready-video">
+                    <button class="btn-ready" id="createDone">Listo</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seccion Mis Guifos -->
+        <section class="my-guifos" id="myGuifos">
+            <a name="guifos"></a>
+            <p id="gruifos-title">Mis Guifos:</p>
+            <div class="guifos-content" id="myGuifosList">
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./script/plugin/RecordRTC.min.js"></script>
+    <script src="./script/upload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GifOs</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2ea90a6f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <p>¡Bienvenidos/as a Guifos.com! ------ Donde los gifs están.////// Número de visitas: 12.765.803 </p>
+    </header>
+
+    <div class="content">
+
+        <!-- barra de navegacion -->
+        <main>
+            <h1><img src="./img/gifOF_logo.png" alt="Logo de Guifos" id="logoImg"></h1>
+            <div class="main-content">
+                <button onclick="document.location='upload.html'" class="btn-create">Crear Guifos</button>
+                <div class="dropdown">
+                    <button class="dropbtn" id="dropBtn"><p>Elegir tema</p> <div class="img-content"><i class="fas fa-caret-down"></i></div></button>
+                    <div class="dropdown-content" id="dropdownContent">
+                      <button id="light"><span>S</span>ailor Light</button>
+                      <button id="night">Sailor Night</button>
+                    </div>
+                </div>
+                <a href="./upload.html#guifos" class="btn-mygif"> <span>M</span>is Guifos</a>
+            </div>
+        </main>
+        
+        <!-- Barra de busqueda -->
+        <div class="search">
+            <h2>Buscar</h2>
+            <div class="search-content">
+                <input  type="search" id="searchContent" placeholder="Buscar gifs, hashtags, temas,busca lo que quieras...">
+                <button id="btnSearch" onclick="getSearchContent()"><i class="fas fa-search" id="searchImg"></i> <p id="searchText">Buscar</p></button>
+            </div>
+            <ul class="searchResp" id="searchResp">
+                <p class="title-search">Busquedas Populares:</p>  
+                <li><a href="#" onclick="showMoreContent('goku')"> <p>Goku</p></a></li>    
+                <li><a href="#" onclick="showMoreContent('tom & jerry')"> <p>Tom & Jerry</p></a></li>
+                <li><a href="#" onclick="showMoreContent('rick & morty')"> <p>Rick & Morty</p></a></li>
+            </ul>
+        </div>
+
+        <!-- Seccion de sugerencias -->
+        <section class="suggestions" id="suggestions">
+            <p>Hoy te sugerimos: </p>
+            <div class="suggestions-content" id="suggestionContent">            
+            </div>
+        </section>
+
+        <!-- Seccion de tendencias -->
+        <section class="trends">
+            <p id="trendsTitle">Tendencias:</p>
+            <div class="trends-content" id="trendsContent">
+           </div>
+        </section>
+
+
+    </div>
+
+
+    <script src="./script/app.js"></script>    
+</body>
+</html>

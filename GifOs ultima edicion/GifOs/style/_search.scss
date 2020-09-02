@@ -1,0 +1,134 @@
+.search {
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 19px;
+  font-family: $letterLight;
+  color: white;
+  border: 2px;
+  border-style: outset;
+  background-color: rgb(230, 230, 230);
+
+  h2 {
+    background: $colorBarLight;
+    font-size: 1em;
+    padding-left: 5px;
+  }
+
+  .search-content {
+
+    height: 72px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px outset;
+
+    input {
+      width: 90%;
+      height: 45px;
+      margin-left: 5px;
+      display: flex;
+      align-self: center;
+      border: 2px solid rgb(151, 151, 151);
+      border-style: inset;
+      font-family: $letterLight;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+
+      width: 8%;
+      height: 50%;
+      margin-left: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 0.5px rgb(180, 180, 180);
+      border-style: groove;
+      cursor: pointer;
+
+
+
+      i {
+        margin-left: 5px;
+        color: rgb(180, 180, 180);
+      }
+
+      p {
+        font-family: $letterLight;
+        font-size: 16px;
+        color: rgb(180, 180, 180);
+      }
+
+      &.botonBuscador{
+
+        
+      }
+
+
+      &:focus {
+
+        outline: 1px solid black;
+        border: dotted;
+        border-width: 1px;
+        content: "";
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+      }
+
+    }
+
+  }
+
+  .searchResp {
+
+
+    display: none;
+
+    .title-search {
+
+      margin: 15px 10px;
+      color: black;
+    }
+
+    li {
+      list-style: none;
+
+      a {
+
+        text-decoration: none;
+
+        p {
+          margin: 20px 10px;
+          padding-left: 10px;
+          width: 1055px;
+          height: 34px;
+          border: 1px solid black;
+          display: flex;
+          align-items: center;
+          font-family: $letterLight;
+          font-size: 18px;
+          color: black;
+          background: white;
+
+          &:hover {
+            outline: 1px solid;
+            background: rgba(230, 230, 230,0.3);
+            padding: 10px;
+            border: dotted;
+            border-width: 1px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}

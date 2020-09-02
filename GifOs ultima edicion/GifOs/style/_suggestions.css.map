@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa,CAET,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,eAAe,CACvB,UAAU,CAAE,IAAI,CAChB,aAAa,CAAE,IAAI",
+"sources": ["suggestions.scss"],
+"names": [],
+"file": "suggestions.css"
+}

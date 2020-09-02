@@ -1,0 +1,337 @@
+@import "_variables.scss";
+@import "_main.scss";
+@import "_search.scss";
+@import "_trends.scss";
+@import "_suggestions.scss";
+@import "_upload.scss";
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    //------- Estilado modo noche -------//
+
+    &.dark {
+
+        transition: all 0.3s;
+        background: rgb(17, 0, 56);
+
+        header {
+            background: $colorBarNight;
+        }
+
+        main {
+
+            .btn-create {
+
+                background: rgb(238, 62, 254);
+                color: white;  
+
+            }
+
+            .dropdown {
+                p {
+                    background: rgb(238, 62, 254);
+                    color: white;
+                }
+
+                .img-content {
+
+                    background: rgb(238, 62, 254);    
+                    
+                    i {
+                        color: white;                                                
+                    }
+
+                    &:hover{
+                        color: white;
+                    }
+                }
+
+                .dropdown-content{
+                    background: rgb(180, 180, 180);
+
+                    button{
+
+                        background:rgb(204, 204, 204);  
+                        
+
+                        &:hover{
+                            background: rgb(46, 50, 251);
+                            color: white;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+            }
+
+            .btn-mygif{
+                color: white;
+                border: 1px solid rgb(17, 0, 56);
+            }
+
+        }
+
+        .search{
+
+            background: rgb(180, 180, 180);
+
+            h2 {
+                background: $colorBarNight;
+            }
+            
+            .search-content{
+
+                input {
+
+                    &:focus ~ button {
+
+                        background: rgb(238, 62, 254);
+
+                        i {
+                            color: white;
+                        }
+                        p{
+                            color: white;
+                        }
+
+                    }
+                }
+
+                button{
+                
+                    background: rgb(181, 181, 181);
+                    border: 0.5px outset rgb(128, 128, 128);
+                    border-color: rgb(224, 231, 231);
+    
+                    i{
+                        color: rgb(143, 143, 143);
+                    }
+    
+                    p{
+                        color: rgb(143, 143, 143);
+                    }
+
+                    &.botonBuscador {
+
+                    }
+
+                }
+
+            }
+
+            .searchResp{
+                
+                li{
+
+                    a{
+
+                        p{
+
+                            background: rgb(199, 199, 199);
+                        }
+                    }
+                }
+            }
+        
+        }
+
+        .suggestions{
+
+            p {
+                border-color: rgb(46, 50, 251) ;
+                background: white;
+            }
+
+            .suggestions-content{
+
+                .suggestion-div-content{
+
+                    .suggestion-title{
+
+                        font-weight: 600;
+                        background: $colorBarNight;
+                        text-transform: capitalize;
+                    }
+
+                    .btn-suggestion-gif{
+
+                        background: rgb(46, 50, 251);
+                    }
+                }
+            }
+        }
+
+        .trends{
+            
+            p {
+                border-color: rgb(46, 50, 251) ;
+                background: white;
+            }
+
+            .trends-content{
+
+                .trends-content-gif{
+
+                    .title-trends-content{
+
+                        .title-trends-gif{
+
+                            background: $colorBarNight;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // estilado upload.html
+
+        .create-content{
+
+            .create-gif-section{
+
+                .create-gif-title{
+
+                    h3 {
+                        background: $colorBarNight;
+                    }
+
+                    .create-button{
+
+                        button {
+
+                            background: $colorButtonNight;
+                        }
+                    }
+                }
+            }
+
+            .open-video {
+
+                .open-video-div{
+
+                    .title-start-video{
+
+                        background: $colorBarNight;
+                    }
+
+                    .btn-start-video{
+
+                        .btn-camera{
+
+                            background: $colorButtonNight;
+                        }
+
+                        .btn-capture{
+                            background: $colorButtonNight;
+                        }
+                    }
+                }
+            }
+
+
+            .capture-guifo{
+
+                .capture-video-div{
+
+                    .btn-capture-video{
+
+                        .btn-create-content{
+
+                            .btn-repeat-capture{
+
+                                background: rgb(17, 0, 56);
+                                color: white;
+                            }
+
+                            .btn-upload-guifo{
+
+                                background: rgb(17, 0, 56);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .upload-guifo{
+
+                .upload-guifo-div{
+
+                    .btn-capture-video{
+
+                        .btn-cancel{
+
+                            background: $colorButtonNight;
+                        }
+                    }
+                }
+            }
+
+            .succes-create{
+
+                .succes-create-guifo{
+
+                    .title-upload-video{
+
+                        p{
+                           background: $colorBarNight;
+                        }
+                    }
+                    .alert-content{
+
+                        .btns-succes{
+
+                            .btn-create-copy{
+
+                                background: $colorButtonNight;
+                            }
+
+                            .btn-create-download{
+
+                                background: $colorButtonNight;
+                            }
+                        }
+                    }
+
+                    .btn-ready-video{
+                        
+                        .btn-ready{
+
+                            background: $colorButtonNight;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.content {
+
+    margin-left: 91px;
+    margin-right: 143px;
+
+
+}
+
+header {
+
+    width: 100%;
+    border-bottom: 1px solid black;
+    background: $colorBarLight;
+    color: white;
+
+}
